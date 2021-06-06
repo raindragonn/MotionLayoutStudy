@@ -7,7 +7,50 @@
         motion:constraintSetEnd="@+id/end"
         motion:constraintSetStart="@id/start"
         motion:duration="300">
-        <KeyFrameSet></KeyFrameSet>
+        <KeyFrameSet>
+            <KeyAttribute
+                android:alpha="1"
+                app:framePosition="0"
+                app:motionTarget="@+id/tv_singer_mini" />
+            <KeyAttribute
+                android:alpha="0"
+                app:framePosition="30"
+                app:motionTarget="@+id/tv_singer_mini" />
+        </KeyFrameSet>
+
+        <KeyFrameSet>
+            <KeyAttribute
+                android:alpha="1"
+                app:framePosition="0"
+                app:motionTarget="@+id/tv_title_mini" />
+            <KeyAttribute
+                android:alpha="0"
+                app:framePosition="30"
+                app:motionTarget="@+id/tv_title_mini" />
+        </KeyFrameSet>
+
+        <KeyFrameSet>
+            <KeyAttribute
+                android:alpha="0"
+                app:framePosition="0"
+                app:motionTarget="@+id/tv_title" />
+            <KeyAttribute
+                android:alpha="0.2"
+                app:framePosition="90"
+                app:motionTarget="@+id/tv_title" />
+        </KeyFrameSet>
+
+        <KeyFrameSet>
+            <KeyAttribute
+                android:alpha="0"
+                app:framePosition="0"
+                app:motionTarget="@+id/tv_singer" />
+            <KeyAttribute
+                android:alpha="0.2"
+                app:framePosition="90"
+                app:motionTarget="@+id/tv_singer" />
+        </KeyFrameSet>
+
         <OnSwipe
             app:dragDirection="dragUp"
             motion:touchAnchorId="@+id/fl_background"
@@ -79,6 +122,7 @@
             android:layout_width="0.1dp"
             android:layout_height="0.1dp"
             android:layout_marginTop="16dp"
+            android:alpha="0"
             motion:layout_constraintEnd_toEndOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintTop_toBottomOf="@id/iv_cover" />
@@ -88,6 +132,7 @@
             android:layout_width="0.1dp"
             android:layout_height="0.1dp"
             android:layout_marginTop="4dp"
+            android:alpha="0"
             motion:layout_constraintEnd_toEndOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintTop_toBottomOf="@id/tv_title" />
@@ -131,6 +176,7 @@
             android:layout_width="0.1dp"
             android:layout_height="0.1dp"
             android:layout_marginStart="8dp"
+            android:alpha="0"
             motion:layout_constraintEnd_toEndOf="@id/fl_background"
             motion:layout_constraintTop_toTopOf="@id/fl_background" />
 
@@ -139,12 +185,13 @@
             android:layout_width="0.1dp"
             android:layout_height="0.1dp"
             android:layout_marginStart="8dp"
+            android:alpha="0"
             motion:layout_constraintEnd_toEndOf="@id/fl_background"
             motion:layout_constraintTop_toTopOf="@id/fl_background" />
 
         <Constraint
             android:id="@+id/iv_back"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:visibility="visible"
             app:layout_constraintEnd_toEndOf="@id/fl_background"
